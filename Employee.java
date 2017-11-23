@@ -20,13 +20,13 @@ public class Employee extends User implements Comparable
     public void giveOrder(Order order) {
     	this.order = order;
     }
-    public int compareTo(Object obj) {
-        Employee employee = (Employee) obj;
-        if(employee != obj) {
+     public int compareTo(Object obj) {
+        Employee other = (Employee) obj;
+        if(salary != other.salary && workExperience != other.workExperience && order != other.order) {
                return -1;
         }
         else 
-        	return +1;
+        	return 1;
         
     }
     
