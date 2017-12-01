@@ -1,39 +1,35 @@
+import java.io.Serializable;
 import java.util.Vector;
 
-/**
- */
-public class Course {
-    /**
-     */
+public class Course implements Serializable {
+
     private Vector<CourseFile> files;
-
-    /**
-     */
     private Teacher teacher;
-
-    /**
-     */
     private int credits;
+	public String name;
+	
+	public Course(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public String toString(){
+		return name;
+	}
 
-    /**
-     * @return 
-     */
+
     public Vector<CourseFile> getFiles() {
-        return null;
+        return files;
     }
+   
 
-    /**
-     * @return 
-     */
+
     public Teacher getTeacher() {
-        return null;
+        return teacher;
     }
 
-    /**
-     * @return 
-     */
     public int getCredits() {
-        return 0;
+        return credits;
     }
 }
 

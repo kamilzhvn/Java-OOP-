@@ -1,4 +1,5 @@
 import java.lang.*;
+import java.util.Vector;
 
 
 public class Mark {
@@ -6,14 +7,14 @@ public class Mark {
     private Student student;
     private Grade grade;
     private int mark;
-
+   
     public String getCourse() {
-        return null;
+        return course;
     }
 
  
     public Student getStudent() {
-        return null;
+        return student;
     }
     
 
@@ -29,10 +30,21 @@ public class Mark {
 		else if( mark <=85) return Grade.B;
 		else if( mark <=90) return Grade.B_PLUS;
 		else if( mark <=95) return Grade.A_MINUS;
-		else ( mark <=100) return Grade.A;
+		else if ( mark <=100) return Grade.A;
+		return null;
 	}
     public int getMark() {
         return mark;
     }
+
+
+	public Grade getGrade() {
+		return grade;
+	}
+
+
+	public void setGrade(Grade grade) {
+		this.grade = grade;
+	}
 }
 

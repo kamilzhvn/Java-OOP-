@@ -1,39 +1,30 @@
 import java.lang.*;
 
-/**
- */
 public class CourseFile {
-    /**
-     */
+    
     private Course course;
 
-    /**
-     */
     private String fileName;
 
-    /**
-     */
     private String fileType;
 
-    /**
-     * @return 
-     */
     public Course getCourse() {
-        return null;
+        return course;
     }
-
-    /**
-     * @return 
-     */
+   
+	public CourseFile(String filename) {
+		super();
+		this.fileName = filename;
+	}
+	public String toString(){
+		return fileName;
+	}
     public String getFileName() {
-        return null;
+        return fileName;
     }
 
-    /**
-     * @return 
-     */
     public String getFileType() {
-        return null;
+        return fileType;
     }
 }
 

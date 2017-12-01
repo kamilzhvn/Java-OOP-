@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 /**
  */
 public class Manager {
@@ -35,6 +37,7 @@ public class Manager {
      * @param managerType 
      */
     public void setManagerType(ManagerType managerType) {
+    	
     }
 
     /**

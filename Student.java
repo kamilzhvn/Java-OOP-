@@ -1,69 +1,60 @@
-import java.lang.*;
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
+import java.util.Vector;
 
-/**
- */
-public class Student {
-    /**
-     */
-    private double gpa;
-
-    /**
-     */
+public class Student extends User implements Serializable{
+    
+    private double GPA;
     private Vector<Schedule> schedule;
-
-    /**
-     */
     private HashMap<Course, Mark> courses;
-
-    /**
-     */
     private Transcript transcript;
-
-    /**
-     * @return 
-     */
-    public double getGpa() {
-        return 0;
+    int id;
+    
+    public Student(String name, int id) {
+		super(name,id);
+		this.id = Database.students.size()+1;
+	}
+	
+    public double getGPA(Mark mark, Course course) {
+        
+    	return GPA;
     }
 
-    /**
-     * @param teacherName 
-     * @param rate 
-     */
+   
     public void rateTeacher(String teacherName, int rate) {
+    	
     }
 
-    /**
-     * @return 
-     */
+
     public Transcript getTranscript() {
-        return null;
+        return transcript;
     }
 
-    /**
-     * @return 
-     */
+   
     public Vector<Schedule> getSchedule() {
-        return null;
+        return schedule;
     }
 
-    /**
-     */
-    public void accessAttendance() {
-    }
-
-    /**
-     * @return 
-     */
+    
+   
+   
     public HashMap<Course, Mark> getCourses() {
-        return null;
+    	return courses;    	
     }
 
-    /**
-     * @return 
-     */
+    
     public int compareTo() {
         return 0;
     }
+    	
+    public boolean addCourse(Course c){
+		return Database.courses.add(c);
+	}
+	public String toString(){
+		return name+ ", id is "+id+", registered courses:  "+(courses.size()==0?"No courses yet ":courses);
+	}
+    
 }
 
